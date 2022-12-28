@@ -242,3 +242,24 @@ main {
     margin: auto;
     padding: 10px 100px;
 }
+
+/* Botonera */
+.duracion {
+    padding-top: 28px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.botones {
+    width: 80%;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reproductor {
+    width: 80px;
+}
