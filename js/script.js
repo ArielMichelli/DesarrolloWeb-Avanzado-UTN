@@ -1,8 +1,19 @@
-const video = document.getElementById("video");
+const video = document.querySelector("video");
 
-function papa(){
+video.addEventListener("loadeddata", function (ev) {
+    document.getElementById('duracion').innerHTML = `Duración del video: ${video.duration.toFixed(2)}`;
+}, true);
+
+function play() {
     video.play()
+    console.log("Esta poniendo Play")
+
 }
-function stop(){
+
+function stop() {
     video.pause()
+    flag = false;
+    console.log("Esta poniendo Pause")
 }
+
+
