@@ -39,28 +39,25 @@
         <h2 class="titulo">Armemos el rompecabezas y veamos que imagen es...</h2>
         <section class="juego">
             <div class="juego__contenedor">
-                <div class="contenedor" ondragover="prevenirDefault(event)" ondrop="soltarElemento(event)">
+                <div id="0" class="contenedor">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
-                <div class="contenedor" ondragover="prevenirDefault(event)" ondrop="soltarElemento(event)">
+                <div id="1" class="contenedor">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
-                <div class="contenedor" ondragover="prevenirDefault(event)" ondrop="soltarElemento(event)">
+                <div id="2" class="contenedor">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
             </div>
             <div class="juego__contenedor">
                 <div class="contenedor__imagen">
-                    <img id="1" ondragstart="inicioDeArrastre(event)" draggable="true" src="../img/Rompe3.png"
-                        alt="Imagen rompecabezas1">
+                    <img id="0" class="img" draggable="true" src="../img/Rompe3.png" alt="Imagen rompecabezas3">
                 </div>
-                <div id="2" class="contenedor__imagen">
-                    <img ondragstart="inicioDeArrastre(event)" draggable="true" src="../img/Rompe2.png"
-                        alt="Imagen rompecabezas2">
+                <div class="contenedor__imagen">
+                    <img id="1" class="img" draggable="true" src="../img/Rompe2.png" alt="Imagen rompecabezas2">
                 </div>
-                <div id="3" class="contenedor__imagen">
-                    <img ondragstart="inicioDeArrastre(event)" draggable="true" src="../img/Rompe1.png"
-                        alt="Imagen rompecabezas1">
+                <div class="contenedor__imagen">
+                    <img id="2" class="img" draggable="true" src="../img/Rompe1.png" alt="Imagen rompecabezas1">
                 </div>
             </div>
         </section>

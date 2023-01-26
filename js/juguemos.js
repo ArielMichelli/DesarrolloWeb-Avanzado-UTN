@@ -1,46 +1,33 @@
 // JUEGO DE ARRASTRAR Y SOLTAR:
 
-// let imagenes = document.querySelectorAll('img');
-// imagenes.forEach(img => {
-//   img.addEventListener('dragend', () => {
-//     console.log(`Se solto la imagen: ${img.name}`)
-//   })
-// })
-// imagenes.forEach(img => {
-//   img.addEventListener('dragstart', () => {
-//     console.log(`Inicio de arrastre de la ${img.name}`)
-//   })
-// })
-let flag = false;
-const contenedor1 = document.querySelectorAll('.contenedor')[0]
-const img1 = document.querySelectorAll('img')[0]
+let imagenes = document.querySelectorAll('.img');
+let contenedores = document.querySelectorAll('.contenedor')
 
+Eventos()
 
-const inicioDeArrastre = (event) => {
-  let source = event.target.src
-  console.dir(event)
-  console.dir(event.target)
-  event.dataTransfer.setData("Text", source)
-}
+function Eventos() {
+  imagenes.forEach(img => {
+    img.addEventListener('dragstart', e => {
+      e.dataTransfer.setData('text', e.target.id)
+      console.log(e.target.id)
 
-// const prevenirDefault = (event) => {
-//   event.preventDefault()
-// }
+    })
 
-const soltarElemento = (event) => {
-  event.preventDefault
-  let infoObtenida = event.dataTransfer.getData("Text")
-  console.dir(infoObtenida)
-  if (flag == false) {
-    console.log(infoObtenida)
-    contenedor1.innerHTML = `<img src='${infoObtenida}' />`
-    // img1.classList.add("ocultar")
-    
-    
-  }
+  })
+  contenedores.forEach(cont => {
+    cont.addEventListener('dragover', e => {
+      e.preventDefault()
+    })
+    cont.addEventListener('drop', e => {
 
+      const elemento = e.dataTransfer.getData('text')
+      let img = document.querySelectorAll('.img')[elemento]
+      e.target.innerHTML = `<img src='${img.src}' />`
+      img.classList.add("ocultar")
+    })
+  })
 }
 
 const reiniciar = () => {
   window.location.reload()
-} 
+}

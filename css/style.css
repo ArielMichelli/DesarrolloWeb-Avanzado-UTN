@@ -278,8 +278,10 @@ main {
 }
 
 .contenedor {
+    margin-top: 40px;
     width: 275px;
     height: 400px;
+
     display: flex;
     border: 2px solid black;
     background-color: grey;
@@ -303,14 +305,13 @@ main {
     margin: 10px;
 }
 
-.ocultar {
-    display: none;
-}
-
-
 .contenedor__imagen img {
     width: 100%;
     height: 100%;
+}
+
+.ocultar {
+    display: none;
 }
 
 .reiniciar {
@@ -319,8 +320,6 @@ main {
     margin: auto;
     padding: 10px 100px;
 }
-
-
 
 
 /* Botonera */
