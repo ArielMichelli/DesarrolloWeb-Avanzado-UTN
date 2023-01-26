@@ -86,7 +86,6 @@ polygon#tec2 {
     }
 }
 
-
 @keyframes part_2 {
     0% {
         transform: translate(0, -10px);
@@ -268,13 +267,6 @@ main {
     color: white;
 }
 
-/* 
-video {
-    object-fit: contain;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-} */
-
 /* PAGE => Jueguemos*/
 main {
     padding: 100px 20px;
@@ -296,8 +288,29 @@ main {
     align-items: center;
 }
 
+.contenedor img {
+    width: 100%;
+    height: 100%;
+}
+
 .contenedor p {
     color: #E6DDC4;
+}
+
+.contenedor__imagen {
+    width: 275px;
+    height: 400px;
+    margin: 10px;
+}
+
+.ocultar {
+    display: none;
+}
+
+
+.contenedor__imagen img {
+    width: 100%;
+    height: 100%;
 }
 
 .reiniciar {
@@ -306,6 +319,9 @@ main {
     margin: auto;
     padding: 10px 100px;
 }
+
+
+
 
 /* Botonera */
 .duracion {
